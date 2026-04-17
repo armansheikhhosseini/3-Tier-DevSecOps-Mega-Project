@@ -3,7 +3,6 @@ version: '3.8'
 services:
   mysql:
     image: mysql:8
-    container_name: mysql
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: Aditya
@@ -15,8 +14,8 @@ services:
       - "3306:3306"
 
   backend:
-    build: ./api
-    container_name: backend-api
+    image: armansheikhhosseini/backend:latest
+    restart: always
     environment:
       DB_HOST: mysql
       DB_USER: root
@@ -30,8 +29,8 @@ services:
       - "5000:5000"
 
   frontend:
-    build: ./client
-    container_name: frontend-react
+    image: armansheikhhosseini/frontend:latest
+    restart: always
     ports:
       - "3000:80"
     depends_on:
@@ -39,4 +38,3 @@ services:
 
 volumes:
   mysql-data:
-
