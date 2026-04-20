@@ -1,2 +1,14 @@
 # SSH / AWS keys
 *.pem
+
+# Binary / large setup docs
+*.pdf
+*.docx
+
+# Node
+node_modules/
+
+# Build artifacts
+*.html
+build/
+dist/

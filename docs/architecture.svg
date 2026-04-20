@@ -1,0 +1,261 @@
+<svg width="1300" height="720" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', Arial, sans-serif">
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#58a6ff"/>
+    </marker>
+    <marker id="arr-g" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#3fb950"/>
+    </marker>
+    <marker id="arr-o" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#f78166"/>
+    </marker>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1300" height="720" fill="#0d1117" rx="14"/>
+
+  <!-- Title -->
+  <text x="650" y="38" text-anchor="middle" font-size="18" font-weight="700" fill="#f0f6fc">3-Tier DevSecOps Pipeline — AWS EKS</text>
+  <text x="650" y="58" text-anchor="middle" font-size="11" fill="#8b949e">React.js · Node.js · MySQL · Jenkins · Docker · Kubernetes · SonarQube · Trivy · Prometheus · Grafana</text>
+
+  <!-- ─── SECTION LABELS ─── -->
+  <!-- CI/CD box -->
+  <rect x="14" y="70" width="590" height="340" rx="10" fill="none" stroke="#21262d" stroke-width="1.5" stroke-dasharray="6,3"/>
+  <rect x="25" y="63" width="130" height="18" rx="4" fill="#0d1117"/>
+  <text x="90" y="76" text-anchor="middle" font-size="11" font-weight="600" fill="#d29922">⚙  CI/CD Pipeline</text>
+
+  <!-- EKS box -->
+  <rect x="620" y="70" width="420" height="340" rx="10" fill="none" stroke="#21262d" stroke-width="1.5" stroke-dasharray="6,3"/>
+  <rect x="631" y="63" width="120" height="18" rx="4" fill="#0d1117"/>
+  <text x="691" y="76" text-anchor="middle" font-size="11" font-weight="600" fill="#58a6ff">☸  AWS EKS</text>
+
+  <!-- Monitoring box -->
+  <rect x="1056" y="70" width="230" height="340" rx="10" fill="none" stroke="#21262d" stroke-width="1.5" stroke-dasharray="6,3"/>
+  <rect x="1067" y="63" width="100" height="18" rx="4" fill="#0d1117"/>
+  <text x="1117" y="76" text-anchor="middle" font-size="11" font-weight="600" fill="#f46800">📊  Monitoring</text>
+
+  <!-- ─── DEVELOPER ─── -->
+  <rect x="24" y="90" width="90" height="52" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="69" y="112" text-anchor="middle" font-size="18">👨‍💻</text>
+  <text x="69" y="132" text-anchor="middle" font-size="10" fill="#8b949e">Developer</text>
+
+  <!-- Arrow dev → jenkins -->
+  <line x1="114" y1="116" x2="148" y2="116" stroke="#58a6ff" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="131" y="110" text-anchor="middle" font-size="9" fill="#58a6ff">git push</text>
+
+  <!-- ─── JENKINS STAGES (vertical stack) ─── -->
+  <!-- Stage 1: Git Checkout -->
+  <rect x="148" y="90" width="130" height="36" rx="6" fill="#21262d" stroke="#d24939" stroke-width="1.5"/>
+  <text x="213" y="103" text-anchor="middle" font-size="10" font-weight="600" fill="#f0f6fc">Git Checkout</text>
+  <text x="213" y="116" text-anchor="middle" font-size="9" fill="#8b949e">github.com/armansheikhhosseini</text>
+
+  <!-- Stage 2: Lint -->
+  <line x1="213" y1="126" x2="213" y2="140" stroke="#58a6ff" stroke-width="1.5" marker-end="url(#arr)"/>
+  <rect x="148" y="140" width="130" height="36" rx="6" fill="#21262d" stroke="#30363d" stroke-width="1.5"/>
+  <text x="213" y="153" text-anchor="middle" font-size="10" font-weight="600" fill="#f0f6fc">Lint (JS Syntax)</text>
+  <text x="213" y="166" text-anchor="middle" font-size="9" fill="#8b949e">Frontend + Backend</text>
+
+  <!-- Stage 3: GitLeaks -->
+  <line x1="213" y1="176" x2="213" y2="190" stroke="#58a6ff" stroke-width="1.5" marker-end="url(#arr)"/>
+  <rect x="148" y="190" width="130" height="36" rx="6" fill="#21262d" stroke="#2ea043" stroke-width="1.5"/>
+  <text x="213" y="203" text-anchor="middle" font-size="10" font-weight="600" fill="#f0f6fc">🔍 GitLeaks Scan</text>
+  <text x="213" y="216" text-anchor="middle" font-size="9" fill="#8b949e">Secret detection</text>
+
+  <!-- Stage 4: SonarQube -->
+  <line x1="213" y1="226" x2="213" y2="240" stroke="#58a6ff" stroke-width="1.5" marker-end="url(#arr)"/>
+  <rect x="148" y="240" width="130" height="36" rx="6" fill="#21262d" stroke="#4e9bcd" stroke-width="1.5"/>
+  <text x="213" y="253" text-anchor="middle" font-size="10" font-weight="600" fill="#f0f6fc">📊 SonarQube SAST</text>
+  <text x="213" y="266" text-anchor="middle" font-size="9" fill="#8b949e">0 Bugs · 0 Vulns · A Rating</text>
+
+  <!-- Stage 5: Quality Gate -->
+  <line x1="213" y1="276" x2="213" y2="290" stroke="#58a6ff" stroke-width="1.5" marker-end="url(#arr)"/>
+  <rect x="148" y="290" width="130" height="36" rx="6" fill="#21262d" stroke="#4e9bcd" stroke-width="1.5"/>
+  <text x="213" y="303" text-anchor="middle" font-size="10" font-weight="600" fill="#f0f6fc">✅ Quality Gate</text>
+  <text x="213" y="316" text-anchor="middle" font-size="9" fill="#8b949e">Blocks on failure</text>
+
+  <!-- Stage 6: Trivy FS -->
+  <line x1="213" y1="326" x2="213" y2="340" stroke="#58a6ff" stroke-width="1.5" marker-end="url(#arr)"/>
+  <rect x="148" y="340" width="130" height="36" rx="6" fill="#21262d" stroke="#1a6fb5" stroke-width="1.5"/>
+  <text x="213" y="353" text-anchor="middle" font-size="10" font-weight="600" fill="#f0f6fc">🛡 Trivy FS Scan</text>
+  <text x="213" y="366" text-anchor="middle" font-size="9" fill="#8b949e">CVE filesystem scan</text>
+
+  <!-- Arrow right to Docker Build column -->
+  <line x1="278" y1="116" x2="320" y2="116" stroke="#58a6ff" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- ─── DOCKER BUILD COLUMN ─── -->
+  <!-- Docker Build Backend -->
+  <rect x="320" y="90" width="140" height="50" rx="6" fill="#21262d" stroke="#2496ed" stroke-width="1.5"/>
+  <text x="390" y="107" text-anchor="middle" font-size="10" font-weight="600" fill="#f0f6fc">🐳 Build Backend</text>
+  <text x="390" y="120" text-anchor="middle" font-size="9" fill="#8b949e">armansheikhhosseini/backend</text>
+  <text x="390" y="133" text-anchor="middle" font-size="9" fill="#2ea043">Trivy image scan ✓</text>
+
+  <!-- Docker Build Frontend -->
+  <rect x="320" y="160" width="140" height="50" rx="6" fill="#21262d" stroke="#2496ed" stroke-width="1.5"/>
+  <text x="390" y="177" text-anchor="middle" font-size="10" font-weight="600" fill="#f0f6fc">🐳 Build Frontend</text>
+  <text x="390" y="190" text-anchor="middle" font-size="9" fill="#8b949e">armansheikhhosseini/frontend</text>
+  <text x="390" y="203" text-anchor="middle" font-size="9" fill="#2ea043">Trivy image scan ✓</text>
+
+  <!-- Arrow Build → Docker Hub -->
+  <line x1="460" y1="115" x2="492" y2="115" stroke="#2496ed" stroke-width="1.5" marker-end="url(#arr)"/>
+  <line x1="460" y1="185" x2="492" y2="185" stroke="#2496ed" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Docker Hub -->
+  <rect x="492" y="90" width="108" height="145" rx="8" fill="#21262d" stroke="#2496ed" stroke-width="1.5"/>
+  <text x="546" y="130" text-anchor="middle" font-size="22">🐳</text>
+  <text x="546" y="152" text-anchor="middle" font-size="10" font-weight="600" fill="#f0f6fc">Docker Hub</text>
+  <text x="546" y="166" text-anchor="middle" font-size="9" fill="#8b949e">armansheikhhosseini/</text>
+  <text x="546" y="179" text-anchor="middle" font-size="9" fill="#8b949e">backend:latest</text>
+  <text x="546" y="192" text-anchor="middle" font-size="9" fill="#8b949e">frontend:latest</text>
+  <text x="546" y="225" text-anchor="middle" font-size="9" fill="#8b949e">:latest</text>
+
+  <!-- Manual Approval -->
+  <rect x="320" y="240" width="140" height="36" rx="6" fill="#21262d" stroke="#d29922" stroke-width="1.5"/>
+  <text x="390" y="253" text-anchor="middle" font-size="10" font-weight="600" fill="#f0f6fc">👤 Manual Approval</text>
+  <text x="390" y="266" text-anchor="middle" font-size="9" fill="#8b949e">Human gate → Production</text>
+
+  <!-- Deploy -->
+  <rect x="320" y="296" width="140" height="36" rx="6" fill="#21262d" stroke="#3fb950" stroke-width="1.5"/>
+  <text x="390" y="309" text-anchor="middle" font-size="10" font-weight="600" fill="#f0f6fc">🚀 Deploy to EKS</text>
+  <text x="390" y="322" text-anchor="middle" font-size="9" fill="#8b949e">kubectl apply -f k8s-prod/</text>
+
+  <!-- Verify -->
+  <rect x="320" y="352" width="140" height="36" rx="6" fill="#21262d" stroke="#3fb950" stroke-width="1.5"/>
+  <text x="390" y="365" text-anchor="middle" font-size="10" font-weight="600" fill="#f0f6fc">✅ Verify Deployment</text>
+  <text x="390" y="378" text-anchor="middle" font-size="9" fill="#8b949e">kubectl get pods/ingress</text>
+
+  <!-- Arrow CI → EKS -->
+  <line x1="460" y1="314" x2="630" y2="230" stroke="#3fb950" stroke-width="1.5" marker-end="url(#arr-g)" stroke-dasharray="5,3"/>
+  <text x="548" y="292" text-anchor="middle" font-size="9" fill="#3fb950">deploy</text>
+
+  <!-- ─── EKS CLUSTER ─── -->
+  <!-- Nginx Ingress -->
+  <rect x="630" y="90" width="400" height="42" rx="8" fill="#21262d" stroke="#326ce5" stroke-width="2"/>
+  <text x="830" y="107" text-anchor="middle" font-size="11" font-weight="700" fill="#f0f6fc">Nginx Ingress Controller</text>
+  <text x="830" y="122" text-anchor="middle" font-size="9" fill="#8b949e">cert-manager · Let's Encrypt TLS · armansheikhhosseini.dev</text>
+
+  <!-- Arrow Ingress → Frontend -->
+  <line x1="720" y1="132" x2="680" y2="168" stroke="#326ce5" stroke-width="1.5" marker-end="url(#arr)"/>
+  <!-- Arrow Ingress → Backend -->
+  <line x1="830" y1="132" x2="830" y2="168" stroke="#326ce5" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Frontend -->
+  <rect x="630" y="168" width="180" height="60" rx="8" fill="#21262d" stroke="#61dafb" stroke-width="1.5"/>
+  <text x="720" y="186" text-anchor="middle" font-size="11" font-weight="600" fill="#61dafb">⚛  React.js Frontend</text>
+  <text x="720" y="200" text-anchor="middle" font-size="9" fill="#8b949e">3 Replicas · Nginx-served</text>
+  <text x="720" y="214" text-anchor="middle" font-size="9" fill="#8b949e">armansheikhhosseini/frontend</text>
+
+  <!-- Backend -->
+  <rect x="820" y="168" width="210" height="60" rx="8" fill="#21262d" stroke="#68a063" stroke-width="1.5"/>
+  <text x="925" y="186" text-anchor="middle" font-size="11" font-weight="600" fill="#68a063">🟢 Node.js / Express API</text>
+  <text x="925" y="200" text-anchor="middle" font-size="9" fill="#8b949e">3 Replicas · Port 5000</text>
+  <text x="925" y="214" text-anchor="middle" font-size="9" fill="#8b949e">armansheikhhosseini/backend</text>
+
+  <!-- Arrow Backend → MySQL -->
+  <line x1="925" y1="228" x2="925" y2="268" stroke="#326ce5" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- MySQL StatefulSet -->
+  <rect x="820" y="268" width="210" height="70" rx="8" fill="#21262d" stroke="#f29111" stroke-width="1.5"/>
+  <text x="925" y="286" text-anchor="middle" font-size="11" font-weight="600" fill="#f29111">🗄  MySQL 8</text>
+  <text x="925" y="300" text-anchor="middle" font-size="9" fill="#8b949e">StatefulSet · 1 Replica</text>
+  <text x="925" y="314" text-anchor="middle" font-size="9" fill="#8b949e">EBS Persistent Volume · 5Gi</text>
+  <text x="925" y="328" text-anchor="middle" font-size="9" fill="#8b949e">Credentials via K8s Secret</text>
+
+  <!-- EBS -->
+  <rect x="830" y="356" width="185" height="34" rx="6" fill="#161b22" stroke="#f29111" stroke-width="1" stroke-dasharray="4,2"/>
+  <text x="922" y="373" text-anchor="middle" font-size="9" fill="#f29111">💾 AWS EBS · ebs-sc StorageClass</text>
+  <line x1="925" y1="338" x2="925" y2="356" stroke="#f29111" stroke-width="1" stroke-dasharray="3,2"/>
+
+  <!-- Arrow EKS → Monitoring -->
+  <line x1="1050" y1="200" x2="1068" y2="200" stroke="#f46800" stroke-width="1.5" marker-end="url(#arr-o)"/>
+
+  <!-- ─── MONITORING ─── -->
+  <!-- Prometheus -->
+  <rect x="1068" y="90" width="208" height="56" rx="8" fill="#21262d" stroke="#e6522c" stroke-width="1.5"/>
+  <text x="1172" y="111" text-anchor="middle" font-size="11" font-weight="600" fill="#e6522c">🔥 Prometheus</text>
+  <text x="1172" y="125" text-anchor="middle" font-size="9" fill="#8b949e">kube-prometheus-stack</text>
+  <text x="1172" y="138" text-anchor="middle" font-size="9" fill="#8b949e">EBS 5Gi · LoadBalancer</text>
+
+  <!-- Grafana -->
+  <line x1="1172" y1="146" x2="1172" y2="166" stroke="#f46800" stroke-width="1.5" marker-end="url(#arr-o)"/>
+  <rect x="1068" y="166" width="208" height="56" rx="8" fill="#21262d" stroke="#f46800" stroke-width="1.5"/>
+  <text x="1172" y="187" text-anchor="middle" font-size="11" font-weight="600" fill="#f46800">📈 Grafana</text>
+  <text x="1172" y="201" text-anchor="middle" font-size="9" fill="#8b949e">Cluster dashboards</text>
+  <text x="1172" y="214" text-anchor="middle" font-size="9" fill="#8b949e">LoadBalancer · admin</text>
+
+  <!-- kube-state-metrics -->
+  <line x1="1172" y1="222" x2="1172" y2="242" stroke="#f46800" stroke-width="1.5" marker-end="url(#arr-o)"/>
+  <rect x="1068" y="242" width="208" height="42" rx="8" fill="#21262d" stroke="#30363d" stroke-width="1.5"/>
+  <text x="1172" y="259" text-anchor="middle" font-size="10" font-weight="600" fill="#f0f6fc">kube-state-metrics</text>
+  <text x="1172" y="273" text-anchor="middle" font-size="9" fill="#8b949e">Pod / Deployment metrics</text>
+
+  <!-- node-exporter -->
+  <line x1="1172" y1="284" x2="1172" y2="304" stroke="#f46800" stroke-width="1.5" marker-end="url(#arr-o)"/>
+  <rect x="1068" y="304" width="208" height="42" rx="8" fill="#21262d" stroke="#30363d" stroke-width="1.5"/>
+  <text x="1172" y="321" text-anchor="middle" font-size="10" font-weight="600" fill="#f0f6fc">node-exporter</text>
+  <text x="1172" y="335" text-anchor="middle" font-size="9" fill="#8b949e">Host CPU / Memory / Disk</text>
+
+  <!-- ─── BOTTOM: SCREENSHOTS ROW ─── -->
+  <line x1="14" y1="432" x2="1286" y2="432" stroke="#21262d" stroke-width="1"/>
+
+  <!-- Label -->
+  <text x="650" y="454" text-anchor="middle" font-size="12" font-weight="600" fill="#8b949e">Pipeline in Action</text>
+
+  <!-- Screenshot placeholders / labels -->
+  <!-- Jenkins -->
+  <rect x="30" y="466" width="270" height="50" rx="8" fill="#21262d" stroke="#d24939" stroke-width="1.5"/>
+  <text x="165" y="487" text-anchor="middle" font-size="11" font-weight="600" fill="#d24939">Jenkins Stage View</text>
+  <text x="165" y="503" text-anchor="middle" font-size="9" fill="#8b949e">12 stages · all green · ~49s avg run</text>
+
+  <!-- SonarQube -->
+  <rect x="320" y="466" width="270" height="50" rx="8" fill="#21262d" stroke="#4e9bcd" stroke-width="1.5"/>
+  <text x="455" y="487" text-anchor="middle" font-size="11" font-weight="600" fill="#4e9bcd">SonarQube Analysis</text>
+  <text x="455" y="503" text-anchor="middle" font-size="9" fill="#8b949e">0 Bugs · 0 Vulnerabilities · A Reliability · A Security</text>
+
+  <!-- kubectl -->
+  <rect x="610" y="466" width="270" height="50" rx="8" fill="#21262d" stroke="#3fb950" stroke-width="1.5"/>
+  <text x="745" y="487" text-anchor="middle" font-size="11" font-weight="600" fill="#3fb950">kubectl — EKS Pods</text>
+  <text x="745" y="503" text-anchor="middle" font-size="9" fill="#8b949e">3×backend · 3×frontend · 1×mysql · all Running</text>
+
+  <!-- Grafana -->
+  <rect x="900" y="466" width="270" height="50" rx="8" fill="#21262d" stroke="#f46800" stroke-width="1.5"/>
+  <text x="1035" y="487" text-anchor="middle" font-size="11" font-weight="600" fill="#f46800">Grafana Dashboard</text>
+  <text x="1035" y="503" text-anchor="middle" font-size="9" fill="#8b949e">CPU 3.5% · Mem 64.1% · 5 namespaces</text>
+
+  <!-- ─── BOTTOM LEGEND ─── -->
+  <text x="650" y="556" text-anchor="middle" font-size="12" font-weight="600" fill="#8b949e">Security Gates embedded in every build</text>
+
+  <rect x="86" y="570" width="12" height="12" rx="2" fill="#2ea043"/>
+  <text x="104" y="581" font-size="10" fill="#c9d1d9">GitLeaks — secret detection</text>
+
+  <rect x="286" y="570" width="12" height="12" rx="2" fill="#4e9bcd"/>
+  <text x="304" y="581" font-size="10" fill="#c9d1d9">SonarQube SAST — code quality</text>
+
+  <rect x="536" y="570" width="12" height="12" rx="2" fill="#1a6fb5"/>
+  <text x="554" y="581" font-size="10" fill="#c9d1d9">Trivy — CVE scanning (FS + image)</text>
+
+  <rect x="786" y="570" width="12" height="12" rx="2" fill="#326ce5"/>
+  <text x="804" y="581" font-size="10" fill="#c9d1d9">Kubernetes RBAC + K8s Secrets</text>
+
+  <rect x="1036" y="570" width="12" height="12" rx="2" fill="#d29922"/>
+  <text x="1054" y="581" font-size="10" fill="#c9d1d9">Manual approval gate</text>
+
+  <!-- Footer -->
+  <text x="650" y="615" text-anchor="middle" font-size="10" fill="#484f58">github.com/armansheikhhosseini/3-Tier-DevSecOps-Mega-Project</text>
+
+  <!-- ─── BRANCH LABELS ─── -->
+  <rect x="86" y="630" width="200" height="28" rx="6" fill="#21262d" stroke="#3fb950" stroke-width="1.5"/>
+  <text x="186" y="649" text-anchor="middle" font-size="10" font-weight="600" fill="#3fb950">🌿 main  ·  prod  ·  dev</text>
+
+  <rect x="310" y="630" width="340" height="28" rx="6" fill="#21262d" stroke="#30363d" stroke-width="1.5"/>
+  <text x="480" y="649" text-anchor="middle" font-size="10" fill="#8b949e">Docker Hub: armansheikhhosseini/backend · armansheikhhosseini/frontend</text>
+
+  <rect x="672" y="630" width="260" height="28" rx="6" fill="#21262d" stroke="#30363d" stroke-width="1.5"/>
+  <text x="802" y="649" text-anchor="middle" font-size="10" fill="#8b949e">AWS EKS · eu-north-1 · Nginx + TLS</text>
+
+  <rect x="954" y="630" width="260" height="28" rx="6" fill="#21262d" stroke="#30363d" stroke-width="1.5"/>
+  <text x="1084" y="649" text-anchor="middle" font-size="10" fill="#8b949e">kube-prometheus-stack · Helm</text>
+
+</svg>
